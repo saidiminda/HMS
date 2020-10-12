@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+	ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: Teal;
+}
+
+li {
+    float: left;
+}
+
+li a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 100px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: grey;
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+
+
+           
+</style>
+</head>
+
+<body style="background-color: #f0ffff;">
+
+<ul class="nav1">
+  
+  <li><a href="warden.html">Previous  </a></li>
+ 
+  <li><a href="index.html">Logout</a></li>
+</ul>
+<center>
+ 
+    <div class="container">
+        <form style="background-color: #fefefe; margin: 5% auto 15% auto; border: 1px solid #888; width: 40%; padding-bottom: 30PX;" action="edit.jsp" method="post">     
+      
+            <center><h2>EDIT STUDENT INFO</h2></center><br><br>
+    
+     <label>Reg Number</label><br>
+     <input type="text" name="regNo" style="width: 90%; padding: 15px; margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none; background: #f1f1f1" required="required" placeholder="enter reg number"><br><br>
+      <label>Block number</label><br>
+      <input type="number" min="1" max="6" name="blockNo" pattern="[0-9]{1}" style="width: 90%; padding: 15px; margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none; background: #f1f1f1" required="required" id="c" placeholder="enter Block number"><br><br>
+     <label>Room Number</label><br>
+     <input type="number" min="1" max="60" name="roomNo" pattern="[0-9]{2}" style="width: 90%; padding: 15px; margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none; background: #f1f1f1" required="required" placeholder="enter Room number"><br><br>
+
+    <input type="radio" name="sideA" value="A" required="required" id="b">side A<br>
+    <input type="radio" name="sideA" value="B" required="required" >side B<br><br><br><br>
+
+    <pre><input type="radio" name="delete" onclick="vali1()" value="update" required="required">UPDATE       <input type="radio" onclick="vali2()" name="delete" value="delete" required="required" id="a">DELETE<br><br></pre>
+                
+                <button type="submit"  style="background-color: #008000; width: 90%; opacity:  0.9; cursor: pointer; padding: 10px 10px;">Submit</button>
+              
+                <script>
+                   function vali1()
+                    {
+                        window.confirm("are you sure you need to Change this imformation");
+                    }
+                    function vali2()
+                    {
+                       window.confirm("are you sure you need to delete this imformation"); 
+                    }
+                    </script>
+    </form>
+  </div>
+
+</center>
+
+
+</body>
+</html>
